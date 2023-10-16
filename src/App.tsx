@@ -20,7 +20,7 @@ const Navigation = () => {
           <img src={charityFinder} width={40} height={40}/>
           Charity Finder
         </Link>
-        <Search searchText={searchText} onChangeText={(e) => setSearchText(e.target.value)}/>
+        <Search searchText={searchText} onChangeText={(e) => setSearchText(e.target.value)} resetText={setSearchText}/>
         <Link to = "/favourite" className='text-3xl text-white hover:text-hover cursor-pointer'>Favourites</Link>
       </div>
       <Outlet />

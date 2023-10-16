@@ -7,11 +7,12 @@ import { useNavigate } from 'react-router-dom';
 type SearchProps = {
   searchText: string;
   onChangeText: ChangeEventHandler<HTMLInputElement>;
+  resetText: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const causesList:string[] = Causes.causes;
 
-const Search = ({searchText, onChangeText}: SearchProps) => {
+const Search = ({searchText, onChangeText, resetText}: SearchProps) => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
   
@@ -42,6 +43,7 @@ const Search = ({searchText, onChangeText}: SearchProps) => {
                 className='cursor-pointer'
                 onClick={() => {
                   navigate(`search/${item}`);
+                  resetText("");
                   setShowMenu(false);
                 }}>
                   {item}
@@ -55,17 +57,3 @@ const Search = ({searchText, onChangeText}: SearchProps) => {
 }
 
 export default Search;
-
-
-// interface CharityResponse {
-//   nonprofits: Charity[];
-// }
-
-// const fetchInitialCharity = async () => {
-//   const response = await axios.get<CharityResponse> (``);
-//   setCharities(response.data.nonprofits);
-// }
-
-// useEffect(() => {
-//   fetchInitialCharity().catch((err) => console.error(err));
-// },[])
