@@ -1,4 +1,4 @@
-import { Routes, Route, Link, Outlet, useParams } from 'react-router-dom';
+import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 import charityFinder from "./assets/charityFinder.png";

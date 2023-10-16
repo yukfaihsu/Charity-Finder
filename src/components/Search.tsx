@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useState } from 'react';
+import { ChangeEventHandler, useState } from 'react';
 import { BsSearch } from "react-icons/bs";
 import Causes from "../apis/causes-data.json";
 import { useNavigate } from 'react-router-dom';

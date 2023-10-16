@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Charity } from "./CharityList";
 import { useNavigate } from "react-router-dom";
 import { ImLocation } from "react-icons/im";

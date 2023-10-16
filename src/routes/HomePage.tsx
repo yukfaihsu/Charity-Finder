@@ -1,4 +1,3 @@
-import React from 'react';
 import CharityList from '../components/CharityList';
 import banner from "../assets/banner.jpg"
 
